@@ -1,10 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react';
 
 const projectScreenshots = [
-  'https://cdn.sanity.io/images/1y3x6uhu/production/1c4e8016da5ab20b7494fda7c964b315500c99ac-2559x1393.png', // Harfmaz
-  'https://cdn.sanity.io/images/1y3x6uhu/production/56266df24a79f54fe037088c338143f0480ea988-1280x720.png', // Veto Game
-  'https://cdn.sanity.io/images/1y3x6uhu/production/a070c53105af3041d59e8870a80b1343c065638a-1280x720.png', // Ötükenverse
-  'https://cdn.sanity.io/images/1y3x6uhu/production/a2621d2da7213807b37b0464c861b961e7d41a98-1280x720.png', // Digital Atelier Portfolio
+  '/projects/compiled-hero.png', // Compiled Studio
+  '/projects/neural-result.jpg', // Neural Style Transfer
+  '/projects/otuken-hero.png', // Ötükenverse
+  '/projects/tetbot-banner.jpg', // Tetbot
 ];
 
 const row1Gifs = [

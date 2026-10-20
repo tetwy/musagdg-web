@@ -125,72 +125,60 @@ interface ProjectsSectionProps {
 
 const projectsData: ProjectData[] = [
   {
-    id: 'harfmaz',
+    id: 'compiled-studios',
     number: '01',
-    name: 'HARFMAZ',
-    category: '(Real-Time Web Application)',
+    name: 'COMPILED STUDIO',
+    category: '(Game Studio & Interactive Web)',
     description:
-      'Real-time multiplayer word and trivia strategy game. Built on Supabase Realtime with zero-latency state synchronization, persistent room reconnection, and client-side democratic voting mechanics.',
-    tools: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase Realtime'],
-    liveUrl: 'https://harfmaz.netlify.app/',
-    githubUrl: 'https://github.com/tetwy/harfbaz-online.git',
-    col1Img1:
-      'https://cdn.sanity.io/images/1y3x6uhu/production/1c4e8016da5ab20b7494fda7c964b315500c99ac-2559x1393.png',
-    col1Img2:
-      'https://cdn.sanity.io/images/1y3x6uhu/production/1c4e8016da5ab20b7494fda7c964b315500c99ac-2559x1393.png',
-    col2Img:
-      'https://cdn.sanity.io/images/1y3x6uhu/production/1c4e8016da5ab20b7494fda7c964b315500c99ac-2559x1393.png',
+      'Independent game studio platform crafted for physics-driven cooperative multiplayer experiences. Engineered with liquid glass aesthetics, modular React 19 architecture, and cinematic dark-mode choreography.',
+    tools: ['React 19', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vite'],
+    liveUrl: 'https://github.com/tetwy/compiled-studios',
+    githubUrl: 'https://github.com/tetwy/compiled-studios.git',
+    col1Img1: '/projects/compiled-gameplay.png',
+    col1Img2: '/projects/compiled-pillars.png',
+    col2Img: '/projects/compiled-hero.png',
   },
   {
-    id: 'veto-game',
+    id: 'neural-style-transfer',
     number: '02',
-    name: 'VETO',
-    category: '(Multiplayer Game & Optimistic UI)',
+    name: 'NEURAL STYLE TRANSFER',
+    category: '(Deep Learning & Computer Vision)',
     description:
-      'High-tempo taboo word game delivering instant interactions via Optimistic UI. Features secure PostgreSQL stored procedures (RPC), realtime score synchronization, and role-based card masking.',
-    tools: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase RPC', 'Optimistic UI'],
-    liveUrl: 'https://veto-game.vercel.app/',
-    githubUrl: 'https://github.com/tetwy/veto-game.git',
-    col1Img1:
-      'https://cdn.sanity.io/images/1y3x6uhu/production/56266df24a79f54fe037088c338143f0480ea988-1280x720.png',
-    col1Img2:
-      'https://cdn.sanity.io/images/1y3x6uhu/production/56266df24a79f54fe037088c338143f0480ea988-1280x720.png',
-    col2Img:
-      'https://cdn.sanity.io/images/1y3x6uhu/production/56266df24a79f54fe037088c338143f0480ea988-1280x720.png',
+      'Deep neural network implementation utilizing Arbitrary Image Stylization to synthesize artistic styles onto real-world imagery. Preserves semantic spatial structures while translating chromatic and textural brushwork.',
+    tools: ['Python', 'TensorFlow Hub', 'Arbitrary Image Stylization', 'OpenCV'],
+    liveUrl: 'https://github.com/tetwy/neural-style-transfer',
+    githubUrl: 'https://github.com/tetwy/neural-style-transfer.git',
+    col1Img1: '/projects/neural-content.jpg',
+    col1Img2: '/projects/neural-style.jpg',
+    col2Img: '/projects/neural-result.jpg',
   },
   {
     id: 'otukenverse',
     number: '03',
     name: 'ÖTÜKENVERSE',
-    category: '(Corporate Web Platform & CMS)',
+    category: '(Enterprise AI & Corporate Platform)',
     description:
-      'Modern corporate platform built for automation solutions. Integrated with Sanity Headless CMS for non-technical content management, modular React architecture, and high technical SEO performance.',
-    tools: ['React', 'Sanity CMS', 'SCSS', 'Responsive UI', 'SEO'],
+      'Corporate enterprise web platform built for high-scale automation solutions. Features multilingual routing (i18n), seamless Cal.com scheduling integration, headless CMS architecture, and performance-tuned micro-interactions.',
+    tools: ['React 18', 'TypeScript', 'Tailwind CSS', 'Sanity CMS', 'i18n', 'Framer Motion'],
     liveUrl: 'https://otukenverse.com',
-    githubUrl: 'https://github.com/tetwy',
-    col1Img1:
-      'https://cdn.sanity.io/images/1y3x6uhu/production/a070c53105af3041d59e8870a80b1343c065638a-1280x720.png',
-    col1Img2:
-      'https://cdn.sanity.io/images/1y3x6uhu/production/a070c53105af3041d59e8870a80b1343c065638a-1280x720.png',
-    col2Img:
-      'https://cdn.sanity.io/images/1y3x6uhu/production/a070c53105af3041d59e8870a80b1343c065638a-1280x720.png',
+    githubUrl: 'https://github.com/tetwy/otukenverse-web.git',
+    col1Img1: '/projects/otuken-services.png',
+    col1Img2: '/projects/otuken-stats.png',
+    col2Img: '/projects/otuken-hero.png',
   },
   {
-    id: 'digital-atelier',
+    id: 'tetbot',
     number: '04',
-    name: 'DIGITAL ATELIER',
-    category: '(Portfolio & Interactive Experience)',
+    name: 'TETBOT',
+    category: '(High-Concurrency Systems & Discord)',
     description:
-      'Kinetic developer portfolio showcasing software engineering craft. Built with fluid Framer Motion choreography, Sanity CMS integration, dynamic project filtering, and type-safe architecture.',
-    tools: ['React', 'TypeScript', 'Framer Motion', 'Sanity CMS', 'SCSS'],
-    liveUrl: 'https://musagdg.com',
-    githubUrl: 'https://github.com/tetwy',
-    col1Img1:
-      'https://cdn.sanity.io/images/1y3x6uhu/production/a2621d2da7213807b37b0464c861b961e7d41a98-1280x720.png',
-    col1Img2:
-      'https://cdn.sanity.io/images/1y3x6uhu/production/a2621d2da7213807b37b0464c861b961e7d41a98-1280x720.png',
-    col2Img:
-      'https://cdn.sanity.io/images/1y3x6uhu/production/a2621d2da7213807b37b0464c861b961e7d41a98-1280x720.png',
+      'High-concurrency Discord voice leveling & entertainment platform written in Go. Features automated Join-to-Create dynamic channel lifecycles, interactive casino mini-games, and high-throughput worker pools.',
+    tools: ['Go (Golang)', 'Discord API', 'Concurrency', 'Docker', 'PostgreSQL'],
+    liveUrl: 'https://discord.com/oauth2/authorize?client_id=1154322243187396710&scope=bot%20applications.commands&permissions=286288976',
+    githubUrl: 'https://github.com/tetwy/tetbot.git',
+    col1Img1: '/projects/tetbot-avatar-framed.png',
+    col1Img2: '/projects/tetbot-code.png',
+    col2Img: '/projects/tetbot-banner.jpg',
   },
 ];
 
