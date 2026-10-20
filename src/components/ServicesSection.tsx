@@ -10,33 +10,33 @@ interface ServiceItem {
 const services: ServiceItem[] = [
   {
     number: '01',
-    name: 'UI / UX & Web Design',
+    name: 'Modern Web & 3D Interactive Experiences',
     description:
-      'Designing intuitive, aesthetic, and responsive digital interfaces with bespoke design systems, fluid interactive prototypes, and typography.',
+      'Crafting high-end, cinematic web interfaces using React 19, TypeScript, Tailwind CSS, and Framer Motion. Engineered with liquid glass aesthetics, physics-inspired motion, and responsive performance.',
   },
   {
     number: '02',
-    name: 'Modern Frontend Architecture',
+    name: 'AI, Computer Vision & Deep Learning',
     description:
-      'Engineering high-performance web applications using React, TypeScript, Tailwind CSS, and fluid Framer Motion animations with 60fps performance.',
+      'Developing custom neural architectures, deep learning models, astronomical image classification, and style synthesis with Python, TensorFlow, and OpenCV — seamlessly bridged to modern web frontends.',
   },
   {
     number: '03',
-    name: 'Real-Time Systems & Backend',
+    name: 'High-Concurrency Systems & Backend Engineering',
     description:
-      'Building zero-latency multiplayer web apps, WebSocket channels, Supabase Realtime, optimistic UI patterns, and resilient database functions.',
+      'Architecting resilient, low-latency microservices, real-time Discord platforms, and high-throughput background systems in Go (Golang) with goroutine worker pools and containerized pipelines.',
   },
   {
     number: '04',
-    name: 'Headless CMS & Scalable Platforms',
+    name: 'Game Development & Physics Simulation',
     description:
-      'Deploying dynamic, easily manageable digital architectures and corporate platforms powered by Sanity.io with deep technical SEO optimization.',
+      'Designing cooperative multiplayer gameplay loops, dynamic rigid-body physics simulations, and immersive 3D game mechanics utilizing Unity (URP) and modern interactive architectures.',
   },
   {
     number: '05',
-    name: 'AI & Machine Learning Integrations',
+    name: 'Enterprise Automation & Headless CMS Platforms',
     description:
-      'Implementing practical intelligence, neural style models, automated pipelines, and custom algorithmic features tailored to product needs.',
+      'Deploying end-to-end business workflow automations (Make, Zapier, n8n), headless CMS ecosystems (Sanity.io), and multilingual architectures (i18n) for scalable corporate operations.',
   },
 ];
 
