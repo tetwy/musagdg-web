@@ -78,8 +78,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {/* Left Column (40% width) - 2 stacked images */}
           <div className="w-full md:w-[40%] flex flex-col gap-4 sm:gap-6">
             <div
-              className="w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] overflow-hidden bg-[#18181B] border border-white/5"
-              style={{ height: 'clamp(130px, 16vw, 230px)' }}
+              className={`w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] overflow-hidden bg-[#18181B] border border-white/5 ${project.col1Img2 ? '' : 'flex-1 min-h-[220px]'}`}
+              style={project.col1Img2 ? { height: 'clamp(130px, 16vw, 230px)' } : undefined}
             >
               <img
                 src={project.col1Img1}
@@ -89,18 +89,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 className={`w-full h-full ${project.contain?.slots.includes('col1Img1') ? 'object-contain' : 'object-cover'} transition-transform duration-700 hover:scale-105`}
               />
             </div>
-            <div
-              className="w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] overflow-hidden bg-[#18181B] border border-white/5"
-              style={{ height: 'clamp(160px, 22vw, 340px)' }}
-            >
-              <img
-                src={project.col1Img2}
-                style={project.contain ? { backgroundColor: project.contain.bg } : undefined}
-                alt={`${project.name} preview 2`}
-                loading="lazy"
-                className={`w-full h-full ${project.contain?.slots.includes('col1Img2') ? 'object-contain' : 'object-cover'} transition-transform duration-700 hover:scale-105`}
-              />
-            </div>
+            {project.col1Img2 && (
+              <div
+                className="w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] overflow-hidden bg-[#18181B] border border-white/5"
+                style={{ height: 'clamp(160px, 22vw, 340px)' }}
+              >
+                <img
+                  src={project.col1Img2}
+                  style={project.contain ? { backgroundColor: project.contain.bg } : undefined}
+                  alt={`${project.name} preview 2`}
+                  loading="lazy"
+                  className={`w-full h-full ${project.contain?.slots.includes('col1Img2') ? 'object-contain' : 'object-cover'} transition-transform duration-700 hover:scale-105`}
+                />
+              </div>
+            )}
           </div>
 
           {/* Right Column (60% width) - 1 tall image */}
@@ -152,10 +154,9 @@ const projectsData: ProjectData[] = [
     tools: ['React 19', 'TypeScript', 'Supabase Realtime', 'Tailwind CSS', 'Framer Motion', 'Vite'],
     liveUrl: 'https://duel-arena-games-728r.vercel.app/#/portal',
     githubUrl: 'https://github.com/tetwy/duel-arena-games',
-    col1Img1: '/projects/duel-veto-cover.jpg',
-    col1Img2: '/projects/duel-shot-2.png',
-    col2Img: '/projects/duel-shot-1.png',
-    contain: { bg: '#121317', slots: ['col1Img2', 'col2Img'] },
+    col1Img1: '/projects/duel-shot-1.png',
+    col2Img: '/projects/duel-shot-2.png',
+    contain: { bg: '#121317', slots: ['col1Img1', 'col2Img'] },
   },
   {
     id: 'astro-siniflandirici',

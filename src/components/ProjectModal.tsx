@@ -10,7 +10,7 @@ export interface ProjectData {
   description: string;
   tools: string[];
   col1Img1: string;
-  col1Img2: string;
+  col1Img2?: string;
   col2Img: string;
   contain?: { bg: string; slots: Array<'col1Img1' | 'col1Img2' | 'col2Img'> };
   liveUrl?: string;
@@ -138,7 +138,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             <h4 className="text-xs uppercase tracking-widest text-[#D7E2EA]/60 font-semibold flex items-center gap-2">
               <Eye className="w-4 h-4 text-[#B600A8]" /> Project Previews & System Flow
             </h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className={`grid grid-cols-1 ${project.col1Img2 ? 'md:grid-cols-2' : ''} gap-4`}>
               <div className="rounded-2xl overflow-hidden border border-white/10 bg-black/40">
                 <img
                   src={project.col1Img1}
@@ -147,14 +147,16 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                   className={`w-full h-64 ${project.contain?.slots.includes('col1Img1') ? 'object-contain' : 'object-cover'} hover:scale-105 transition-transform duration-500`}
                 />
               </div>
-              <div className="rounded-2xl overflow-hidden border border-white/10 bg-black/40">
-                <img
-                  src={project.col1Img2}
-                  style={project.contain ? { backgroundColor: project.contain.bg } : undefined}
-                  alt={`${project.name} preview 2`}
-                  className={`w-full h-64 ${project.contain?.slots.includes('col1Img2') ? 'object-contain' : 'object-cover'} hover:scale-105 transition-transform duration-500`}
-                />
-              </div>
+              {project.col1Img2 && (
+                <div className="rounded-2xl overflow-hidden border border-white/10 bg-black/40">
+                  <img
+                    src={project.col1Img2}
+                    style={project.contain ? { backgroundColor: project.contain.bg } : undefined}
+                    alt={`${project.name} preview 2`}
+                    className={`w-full h-64 ${project.contain?.slots.includes('col1Img2') ? 'object-contain' : 'object-cover'} hover:scale-105 transition-transform duration-500`}
+                  />
+                </div>
+              )}
             </div>
             <div className="rounded-2xl overflow-hidden border border-white/10 bg-black/40">
               <img
