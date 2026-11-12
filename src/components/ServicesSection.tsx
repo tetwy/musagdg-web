@@ -18,7 +18,7 @@ const services: ServiceItem[] = [
     number: '02',
     name: 'AI, Computer Vision & Deep Learning',
     description:
-      'Developing custom neural architectures, deep learning models, astronomical image classification, and style synthesis with Python, TensorFlow, and OpenCV — seamlessly bridged to modern web frontends.',
+      'Developing custom neural architectures, deep learning models, and astronomical image classification with Python, TensorFlow, and OpenCV — seamlessly bridged to modern web frontends.',
   },
   {
     number: '03',

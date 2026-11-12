@@ -1,10 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react';
 
 const projectScreenshots = [
-  '/projects/compiled-hero.png', // Compiled Studio
-  '/projects/neural-result.jpg', // Neural Style Transfer
-  '/projects/otuken-hero.png', // Ötükenverse
   '/projects/tetbot-banner.jpg', // Tetbot
+  '/projects/duel-veto-cover.jpg', // Duel Arena
+  '/projects/astro-onizleme.png', // Astro Sınıflandırıcı
+  '/projects/compiled-hero.png', // Compiled Studio
 ];
 
 const row1Gifs = [

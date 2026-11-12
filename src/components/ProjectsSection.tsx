@@ -69,7 +69,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
           {/* Live Project Button */}
           <div className="self-start lg:self-center">
-            <LiveProjectButton onClick={() => onOpenModal(project)} />
+            <LiveProjectButton label={project.liveUrl ? 'Live Project' : 'Project Details'} onClick={() => onOpenModal(project)} />
           </div>
         </div>
 
@@ -83,9 +83,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             >
               <img
                 src={project.col1Img1}
+                style={project.contain ? { backgroundColor: project.contain.bg } : undefined}
                 alt={`${project.name} preview 1`}
                 loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                className={`w-full h-full ${project.contain?.slots.includes('col1Img1') ? 'object-contain' : 'object-cover'} transition-transform duration-700 hover:scale-105`}
               />
             </div>
             <div
@@ -94,9 +95,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             >
               <img
                 src={project.col1Img2}
+                style={project.contain ? { backgroundColor: project.contain.bg } : undefined}
                 alt={`${project.name} preview 2`}
                 loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                className={`w-full h-full ${project.contain?.slots.includes('col1Img2') ? 'object-contain' : 'object-cover'} transition-transform duration-700 hover:scale-105`}
               />
             </div>
           </div>
@@ -106,9 +108,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <div className="w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] overflow-hidden bg-[#18181B] border border-white/5 min-h-[220px] sm:min-h-[280px] md:min-h-full">
               <img
                 src={project.col2Img}
+                style={project.contain ? { backgroundColor: project.contain.bg } : undefined}
                 alt={`${project.name} hero render`}
                 loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                className={`w-full h-full ${project.contain?.slots.includes('col2Img') ? 'object-contain' : 'object-cover'} transition-transform duration-700 hover:scale-105`}
               />
             </div>
           </div>
@@ -125,60 +128,62 @@ interface ProjectsSectionProps {
 
 const projectsData: ProjectData[] = [
   {
-    id: 'compiled-studios',
-    number: '01',
-    name: 'COMPILED STUDIO',
-    category: '(Game Studio & Interactive Web)',
-    description:
-      'Independent game studio platform crafted for physics-driven cooperative multiplayer experiences. Engineered with liquid glass aesthetics, modular React 19 architecture, and cinematic dark-mode choreography.',
-    tools: ['React 19', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vite'],
-    liveUrl: 'https://github.com/tetwy/compiled-studios',
-    githubUrl: 'https://github.com/tetwy/compiled-studios.git',
-    col1Img1: '/projects/compiled-gameplay.png',
-    col1Img2: '/projects/compiled-pillars.png',
-    col2Img: '/projects/compiled-hero.png',
-  },
-  {
-    id: 'neural-style-transfer',
-    number: '02',
-    name: 'NEURAL STYLE TRANSFER',
-    category: '(Deep Learning & Computer Vision)',
-    description:
-      'Deep neural network implementation utilizing Arbitrary Image Stylization to synthesize artistic styles onto real-world imagery. Preserves semantic spatial structures while translating chromatic and textural brushwork.',
-    tools: ['Python', 'TensorFlow Hub', 'Arbitrary Image Stylization', 'OpenCV'],
-    liveUrl: 'https://github.com/tetwy/neural-style-transfer',
-    githubUrl: 'https://github.com/tetwy/neural-style-transfer.git',
-    col1Img1: '/projects/neural-content.jpg',
-    col1Img2: '/projects/neural-style.jpg',
-    col2Img: '/projects/neural-result.jpg',
-  },
-  {
-    id: 'otukenverse',
-    number: '03',
-    name: 'ÖTÜKENVERSE',
-    category: '(Enterprise AI & Corporate Platform)',
-    description:
-      'Corporate enterprise web platform built for high-scale automation solutions. Features multilingual routing (i18n), seamless Cal.com scheduling integration, headless CMS architecture, and performance-tuned micro-interactions.',
-    tools: ['React 18', 'TypeScript', 'Tailwind CSS', 'Sanity CMS', 'i18n', 'Framer Motion'],
-    liveUrl: 'https://otukenverse.com',
-    githubUrl: 'https://github.com/tetwy/otukenverse-web.git',
-    col1Img1: '/projects/otuken-services.png',
-    col1Img2: '/projects/otuken-stats.png',
-    col2Img: '/projects/otuken-hero.png',
-  },
-  {
     id: 'tetbot',
-    number: '04',
+    number: '01',
     name: 'TETBOT',
-    category: '(High-Concurrency Systems & Discord)',
+    category: '(Rust Systems & Discord)',
     description:
-      'High-concurrency Discord voice leveling & entertainment platform written in Go. Features automated Join-to-Create dynamic channel lifecycles, interactive casino mini-games, and high-throughput worker pools.',
-    tools: ['Go (Golang)', 'Discord API', 'Concurrency', 'Docker', 'PostgreSQL'],
+      'Discord bot written in Rust that turns voice time into levels, rewards and a per-server virtual economy, with mini-games played with virtual coins (card and luck themed, no real money), creature hunting and radio. Built for reliability: a single-writer SQLite ledger keeps balances consistent, supervised background tasks restart after panics, and deploys are checksum-verified with automatic rollback.',
+    tools: ['Rust', 'Serenity & Poise', 'Tokio', 'SQLite', 'Axum', 'Prometheus', 'Docker', 'GitHub Actions'],
     liveUrl: 'https://discord.com/oauth2/authorize?client_id=1154322243187396710&scope=bot%20applications.commands&permissions=286288976',
-    githubUrl: 'https://github.com/tetwy/tetbot.git',
+    // tetbot private; showcase repo henüz açılmadı, ileride açılacak
+    githubUrl: 'https://github.com/tetwy/tetbot-showcase',
     col1Img1: '/projects/tetbot-avatar-framed.png',
     col1Img2: '/projects/tetbot-code.png',
     col2Img: '/projects/tetbot-banner.jpg',
+  },
+  {
+    id: 'duel-arena',
+    number: '02',
+    name: 'DUEL ARENA',
+    category: '(Real-Time Multiplayer Games)',
+    description:
+      'Multiplayer party-game platform: one portal, many games. Create a room, share the link and play in real time with friends. Launches with Veto, a forbidden-word duel, and Harfbaz, a fast category word race, with SketchSpy coming soon. Rooms sync live through Supabase, and each game runs fully isolated inside the portal.',
+    tools: ['React 19', 'TypeScript', 'Supabase Realtime', 'Tailwind CSS', 'Framer Motion', 'Vite'],
+    liveUrl: 'https://duel-arena-games-728r.vercel.app/#/portal',
+    githubUrl: 'https://github.com/tetwy/duel-arena-games',
+    col1Img1: '/projects/duel-veto-cover.jpg',
+    col1Img2: '/projects/duel-shot-2.png',
+    col2Img: '/projects/duel-shot-1.png',
+    contain: { bg: '#121317', slots: ['col1Img2', 'col2Img'] },
+  },
+  {
+    id: 'astro-siniflandirici',
+    number: '03',
+    name: 'ASTRO SINIFLANDIRICI',
+    category: '(AI & Computer Vision)',
+    description:
+      'Full-stack AI app that analyzes deep-space photos and classifies the celestial objects in them. A Flask backend uses OpenCV to separate light sources from the background and a RandomForest model to sort them into 6 classes such as stars, galaxies and nebulae, while the React frontend draws color-coded boxes and distribution charts.',
+    tools: ['Python', 'Flask', 'OpenCV', 'scikit-learn', 'React', 'TypeScript', 'Vite', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/tetwy/astro-siniflandirici',
+    col1Img1: '/projects/astro-onizleme.png',
+    col1Img2: '/projects/astro-shot-1.png',
+    col2Img: '/projects/astro-shot-2.png',
+    contain: { bg: '#030719', slots: ['col1Img1', 'col1Img2', 'col2Img'] },
+  },
+  {
+    id: 'compiled-studios',
+    number: '04',
+    name: 'COMPILED STUDIO',
+    category: '(Game Studio & Interactive Web)',
+    description:
+      'Official website of an independent game studio, introducing its debut title How to Pirate, a 2-4 player physics-driven co-op pirate adventure. Features a full-screen video hero, game flow and community sections, built with React 19 and cinematic dark-mode motion.',
+    tools: ['React 19', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vite', 'Vercel'],
+    liveUrl: 'https://compiled-studios.vercel.app',
+    githubUrl: 'https://github.com/tetwy/compiled-studios',
+    col1Img1: '/projects/compiled-gameplay.png',
+    col1Img2: '/projects/compiled-pillars.png',
+    col2Img: '/projects/compiled-hero.png',
   },
 ];
 

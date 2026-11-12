@@ -12,6 +12,7 @@ export interface ProjectData {
   col1Img1: string;
   col1Img2: string;
   col2Img: string;
+  contain?: { bg: string; slots: Array<'col1Img1' | 'col1Img2' | 'col2Img'> };
   liveUrl?: string;
   githubUrl?: string;
 }
@@ -141,32 +142,32 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               <div className="rounded-2xl overflow-hidden border border-white/10 bg-black/40">
                 <img
                   src={project.col1Img1}
+                  style={project.contain ? { backgroundColor: project.contain.bg } : undefined}
                   alt={`${project.name} preview 1`}
-                  className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+                  className={`w-full h-64 ${project.contain?.slots.includes('col1Img1') ? 'object-contain' : 'object-cover'} hover:scale-105 transition-transform duration-500`}
                 />
               </div>
               <div className="rounded-2xl overflow-hidden border border-white/10 bg-black/40">
                 <img
                   src={project.col1Img2}
+                  style={project.contain ? { backgroundColor: project.contain.bg } : undefined}
                   alt={`${project.name} preview 2`}
-                  className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+                  className={`w-full h-64 ${project.contain?.slots.includes('col1Img2') ? 'object-contain' : 'object-cover'} hover:scale-105 transition-transform duration-500`}
                 />
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden border border-white/10 bg-black/40">
               <img
                 src={project.col2Img}
+                style={project.contain ? { backgroundColor: project.contain.bg } : undefined}
                 alt={`${project.name} hero render`}
-                className="w-full h-80 sm:h-96 object-cover hover:scale-102 transition-transform duration-500"
+                className={`w-full h-80 sm:h-96 ${project.contain?.slots.includes('col2Img') ? 'object-contain' : 'object-cover'} hover:scale-102 transition-transform duration-500`}
               />
             </div>
           </div>
 
           {/* Footer actions */}
-          <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <span className="text-xs text-[#D7E2EA]/60">
-              Tested for high concurrency and zero-latency performance.
-            </span>
+          <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-end gap-4">
             <button
               onClick={onClose}
               className="px-6 py-2.5 rounded-full border border-[#D7E2EA] text-sm uppercase tracking-wider hover:bg-white/10 transition-colors cursor-pointer"

@@ -1,69 +1,52 @@
-# Musa Agdag — Software Architect & Full-Stack Developer
+# Musa Agdag - Kişisel Portfolyo
 
-Personal portfolio website showcasing software architecture craft, real-time web applications, interactive 3D digital experiences, and headless CMS integrations.
+Yazılım geliştirici Musa Agdag'ın kişisel portfolyo sitesi. Gerçek projelerini (Tetbot, Duel Arena, Astro Sınıflandırıcı, Compiled Studio), hizmet alanlarını ve iletişim yollarını tek sayfada, animasyonlu ve modern bir arayüzle sunar.
 
-🌐 **Live Website:** [musagdg.com](https://musagdg.com)
+**Canlı site:** https://musagdg.com
 
----
+## Sitede neler var
 
-## 🚀 Tech Stack
+- Hero bölümü ve manyetik imleç etkileşimi
+- Gerçek projeleri gösteren kayan şerit
+- Hakkımda bölümü
+- Hizmetler: modern web ve 3D etkileşimli deneyimler, yapay zeka ve bilgisayarlı görü, yüksek eşzamanlılıklı sistemler ve backend, oyun geliştirme ve fizik simülasyonu, kurumsal otomasyon ve headless CMS
+- Kartlar halinde proje vitrini; her proje için ayrıntı penceresi, canlı bağlantı ve kaynak kod bağlantısı
+- Cal.com ile 15 dakikalık görüşme planlama penceresi
+- Özgeçmiş indirme (İngilizce ve Türkçe PDF)
 
-- **Framework:** React 19, TypeScript, Vite
-- **Styling:** Tailwind CSS, PostCSS
-- **Animations & Physics:** Framer Motion, Kinetic cursor magnetism
-- **Booking & Scheduling:** Cal.com integration
-- **Assets & Media:** Sanity Headless CDN, High-resolution 3D renders
+## Teknoloji
 
----
+- React 19 + TypeScript
+- Vite
+- Tailwind CSS 4
+- Framer Motion / Motion
+- Lucide ikonları
+- Cal.com gömülü takvim
 
-## 🛠️ Key Capabilities & Sections
+## Kurulum
 
-1. **Hero Section:** Interactive 3D floating character head responding to real-time cursor physics with kinetic magnetic spring damping.
-2. **Infinite Marquee:** Continuous marquee highlighting real-world production projects.
-3. **About & Manifesto:** Design philosophy, architectural principles, and engineering craft.
-4. **Services & Capabilities:** UI/UX systems, Modern Frontend, Real-Time Web Apps (WebSockets/RPC), Headless CMS, and AI/ML integrations.
-5. **Interactive Projects Showcase:** Stacking cards choreography with deep-dive modal previews, live deployments, and source repositories.
-6. **Cal.com Meeting Scheduler:** Frictionless embedded 15-minute consultation booking with calendar synchronization.
+Node.js 18 veya üzeri gerekir.
 
----
-
-## 💻 Development & Deployment
-
-### Prerequisites
-- Node.js 18+
-- npm, yarn, or pnpm
-
-### Quick Start
 ```bash
-# Clone the repository
 git clone https://github.com/tetwy/musagdg-web.git
-
-# Navigate to project directory
 cd musagdg-web
-
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
 ```
 
-### Production Build
-```bash
-# Compile and bundle for production
-npm run build
+Geliştirme sunucusu `http://localhost:3000` adresinde açılır.
 
-# Preview production build locally
+Üretim derlemesi için:
+
+```bash
+npm run build
 npm run preview
 ```
 
----
+## İletişim
 
-## 📬 Contact & Socials
+- Web: [musagdg.com](https://musagdg.com)
+- GitHub: [@tetwy](https://github.com/tetwy)
+- LinkedIn: [Musa Agdag](https://www.linkedin.com/in/musa-agdag-0313052bb/)
+- Cal.com: [cal.com/tetwy/15min](https://cal.com/tetwy/15min)
 
-- **Website:** [musagdg.com](https://musagdg.com)
-- **GitHub:** [@tetwy](https://github.com/tetwy)
-- **LinkedIn:** [Musa Agdag](https://www.linkedin.com/in/musa-agdag-0313052bb/)
-- **Discord:** `tetwy`
-- **Email:** `musagdg@icloud.com`
-- **Cal.com:** [cal.com/tetwy/15min](https://cal.com/tetwy/15min)
