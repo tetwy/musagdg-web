@@ -12,7 +12,6 @@ Yazılım geliştirici Musa Agdag'ın kişisel portfolyo sitesi. Gerçek projele
 - Hizmetler: modern web ve 3D etkileşimli deneyimler, yapay zeka ve bilgisayarlı görü, yüksek eşzamanlılıklı sistemler ve backend, oyun geliştirme ve fizik simülasyonu, kurumsal otomasyon ve headless CMS
 - Kartlar halinde proje vitrini; her proje için ayrıntı penceresi, canlı bağlantı ve kaynak kod bağlantısı
 - Cal.com ile 15 dakikalık görüşme planlama penceresi
-- Özgeçmiş indirme (İngilizce ve Türkçe PDF)
 
 ## Teknoloji
 
