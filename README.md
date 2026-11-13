@@ -1,6 +1,6 @@
 # Musa Agdag - Personal Portfolio
 
-This is the personal portfolio site of Musa Agdag, a software developer. It puts my real projects (Tetbot, Duel Arena, Astro Classifier, Compiled Studio), my services and my contact details on a single page with an animated, modern interface.
+Hi, I'm Musa, a software developer. This is my personal portfolio site. I put my real projects (Tetbot, Duel Arena, Astro Classifier, Compiled Studio), my services and my contact details on a single page, and I gave it an animated, modern look.
 
 **Live site:** https://musagdg.com
 
@@ -9,9 +9,9 @@ This is the personal portfolio site of Musa Agdag, a software developer. It puts
 - A hero section with a magnetic cursor interaction
 - A scrolling strip that shows my real projects
 - An About me section
-- Services: modern web and 3D interactive experiences, AI and computer vision, high-concurrency systems and backend, game development and physics simulation, enterprise automation and headless CMS
+- My services: modern web and 3D interactive experiences, AI and computer vision, high-concurrency systems and backend, game development and physics simulation, enterprise automation and headless CMS
 - A project showcase made of cards, with a details window, a live link and a source code link for each project
-- A Cal.com popup for booking a 15-minute call
+- A Cal.com popup if you'd like to book a 15-minute call with me
 
 ## Tech
 
@@ -24,7 +24,7 @@ This is the personal portfolio site of Musa Agdag, a software developer. It puts
 
 ## Setup
 
-Node.js 18 or newer is required.
+You need Node.js 18 or newer.
 
 ```bash
 git clone https://github.com/tetwy/musagdg-web.git
@@ -43,6 +43,8 @@ npm run preview
 ```
 
 ## Contact
+
+Feel free to reach out:
 
 - Web: [musagdg.com](https://musagdg.com)
 - GitHub: [@tetwy](https://github.com/tetwy)
