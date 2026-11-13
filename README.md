@@ -1,30 +1,30 @@
-# Musa Agdag - Kişisel Portfolyo
+# Musa Agdag - Personal Portfolio
 
-Yazılım geliştirici Musa Agdag'ın kişisel portfolyo sitesi. Gerçek projelerini (Tetbot, Duel Arena, Astro Sınıflandırıcı, Compiled Studio), hizmet alanlarını ve iletişim yollarını tek sayfada, animasyonlu ve modern bir arayüzle sunar.
+This is the personal portfolio site of Musa Agdag, a software developer. It puts my real projects (Tetbot, Duel Arena, Astro Classifier, Compiled Studio), my services and my contact details on a single page with an animated, modern interface.
 
-**Canlı site:** https://musagdg.com
+**Live site:** https://musagdg.com
 
-## Sitede neler var
+## What's on the site
 
-- Hero bölümü ve manyetik imleç etkileşimi
-- Gerçek projeleri gösteren kayan şerit
-- Hakkımda bölümü
-- Hizmetler: modern web ve 3D etkileşimli deneyimler, yapay zeka ve bilgisayarlı görü, yüksek eşzamanlılıklı sistemler ve backend, oyun geliştirme ve fizik simülasyonu, kurumsal otomasyon ve headless CMS
-- Kartlar halinde proje vitrini; her proje için ayrıntı penceresi, canlı bağlantı ve kaynak kod bağlantısı
-- Cal.com ile 15 dakikalık görüşme planlama penceresi
+- A hero section with a magnetic cursor interaction
+- A scrolling strip that shows my real projects
+- An About me section
+- Services: modern web and 3D interactive experiences, AI and computer vision, high-concurrency systems and backend, game development and physics simulation, enterprise automation and headless CMS
+- A project showcase made of cards, with a details window, a live link and a source code link for each project
+- A Cal.com popup for booking a 15-minute call
 
-## Teknoloji
+## Tech
 
 - React 19 + TypeScript
 - Vite
 - Tailwind CSS 4
 - Framer Motion / Motion
-- Lucide ikonları
-- Cal.com gömülü takvim
+- Lucide icons
+- Cal.com embedded calendar
 
-## Kurulum
+## Setup
 
-Node.js 18 veya üzeri gerekir.
+Node.js 18 or newer is required.
 
 ```bash
 git clone https://github.com/tetwy/musagdg-web.git
@@ -33,19 +33,18 @@ npm install
 npm run dev
 ```
 
-Geliştirme sunucusu `http://localhost:3000` adresinde açılır.
+The dev server opens at `http://localhost:3000`.
 
-Üretim derlemesi için:
+For a production build:
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## İletişim
+## Contact
 
 - Web: [musagdg.com](https://musagdg.com)
 - GitHub: [@tetwy](https://github.com/tetwy)
 - LinkedIn: [Musa Agdag](https://www.linkedin.com/in/musa-agdag-0313052bb/)
 - Cal.com: [cal.com/tetwy/15min](https://cal.com/tetwy/15min)
-

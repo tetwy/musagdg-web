@@ -3,7 +3,7 @@ import React, { useRef, useState, useEffect } from 'react';
 const projectScreenshots = [
   '/projects/tetbot-banner.jpg', // Tetbot
   '/projects/duel-shot-1.png', // Duel Arena
-  '/projects/astro-onizleme.png', // Astro Sınıflandırıcı
+  '/projects/astro-onizleme.png', // Astro Classifier
   '/projects/compiled-hero.png', // Compiled Studio
 ];
 

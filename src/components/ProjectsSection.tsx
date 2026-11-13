@@ -138,7 +138,7 @@ const projectsData: ProjectData[] = [
       'Discord bot written in Rust that turns voice time into levels, rewards and a per-server virtual economy, with mini-games played with virtual coins (card and luck themed, no real money), creature hunting and radio. Built for reliability: a single-writer SQLite ledger keeps balances consistent, supervised background tasks restart after panics, and deploys are checksum-verified with automatic rollback.',
     tools: ['Rust', 'Serenity & Poise', 'Tokio', 'SQLite', 'Axum', 'Prometheus', 'Docker', 'GitHub Actions'],
     liveUrl: 'https://discord.com/oauth2/authorize?client_id=1154322243187396710&scope=bot%20applications.commands&permissions=286288976',
-    // tetbot private; showcase repo henüz açılmadı, ileride açılacak
+    // tetbot is private; the showcase repo has not been opened yet and will be later
     githubUrl: 'https://github.com/tetwy/tetbot-showcase',
     col1Img1: '/projects/tetbot-avatar-framed.png',
     col1Img2: '/projects/tetbot-code.png',
